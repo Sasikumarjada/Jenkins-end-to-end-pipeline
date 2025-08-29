@@ -1,0 +1,40 @@
+pipeline {
+    agent {
+        node {
+            label 'dev'
+        }
+    }
+    environment {
+        SCANNER_HOME ="mysonar"
+    }
+    tools {
+        maven "my maven"
+    }
+    stages {
+        stage('code') {
+            steps {
+                git branch: 'develop-1.0', url: 'https://github.com/Sasikumarjada/demorepo.git'
+            }
+        }
+          stage('build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+          stage('CQA') {
+            steps {
+                sh '''
+                    mvn sonar:sonar \
+                        -Dsonar.projectKey=sonarproject \
+                        -Dsonar.host.url=http://34.230.83.28:9000 \
+                        -Dsonar.login=a6dec311046d690ef775b84bd1614cb353edca21
+                '''
+            }
+        }
+           stage('deploy') {
+            steps {
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://3.83.182.205:8080/')], contextPath: 'e-commerce', war: 'target/*.war'
+            }
+        }
+    }
+}
