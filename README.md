@@ -73,7 +73,7 @@ Docker plugin (if using containers)
 Installation Steps
 
 Clone the repository
-bashgit clone https://github.com/YOUR_USERNAME/jenkins-end-to-end-pipeline.git
+bashgit clone https://github.com/Sasikumarjada/jenkins-end-to-end-pipeline.git
 cd jenkins-end-to-end-pipeline
 
 Configure Jenkins
