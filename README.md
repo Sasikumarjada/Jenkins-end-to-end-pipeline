@@ -5,11 +5,13 @@ This project demonstrates a comprehensive CI/CD pipeline implementation using Je
 📊 Pipeline Performance
 PipelineLast SuccessDurationStatusTest Pipeline9 min 36 sec18 sec✅ SuccessProduction Pipeline47 sec31 sec✅ SuccessEnd-to-End Pipeline31 min11 sec✅ Success
 🏗️ Architecture
+
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
 │ Test        │    │ Production  │    │ End-to-End  │
 │ Pipeline    │───▶│ Pipeline    │───▶│ Pipeline    │
 │             │    │             │    │             │
 └─────────────┘    └─────────────┘    └─────────────┘
+
 🔧 Technologies Used
 
 Jenkins: CI/CD orchestration
