@@ -1,6 +1,5 @@
 # Jenkins-end-to-end-pipeline
 Jenkins End-to-End CI/CD Pipeline Project
-![Uploading image.png…]()
 
 🚀 Project Overview
 This project demonstrates a comprehensive CI/CD pipeline implementation using Jenkins, featuring automated testing, production deployment, and end-to-end workflow automation. The pipeline architecture ensures reliable, fast, and automated software delivery.
